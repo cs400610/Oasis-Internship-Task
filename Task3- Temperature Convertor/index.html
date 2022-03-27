@@ -8,10 +8,30 @@
     <title>Temperature Converter</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="tempicon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Podkova:wght@400;500&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <div id="container">
+        Temperature Converter
+    </div>
+    <form id="tempCalc" onsubmit="calculateTemp();">
+        <label for="temp">Please Enter the Temperature you'd like to Convert </label>
+        <br/><input type="number" name="temp" id="temp">
 
+        <select name="temp_diff" id="temp_diff">
+            <option value="celcius">°Celsius</option>
+            <option value="fahrenheit">°Fahrenheit</option>
+        </select><br>
+
+        <input type="submit" name="temp_submit" id="temp_submit"><br>
+        <span id="resultContainer"></span>
+
+    </form>
 
 
     <script src="index.js"></script>
